@@ -1,0 +1,114 @@
+@import "../node_modules/bootstrap/scss/bootstrap-utilities";
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto default pointer wait text move help not-allowed
+    ),
+    "max-width": (
+      property: max-width,
+      class: mw,
+      values: (
+        0: 0,
+        100: 100%,
+        25: 25rem,
+        50: 50rem,
+        75: 75rem,
+        110: 110rem,
+      )
+    ),
+    "duration": (
+      property: transition-duration,
+      class: duration,
+      values: (
+        100: .1s,
+        200: .2s,
+        300: .3s,
+        400: .4s,
+        500: .5s,
+        600: .6s,
+        700: .7s,
+        800: .8s,
+        900: .9s,
+        1000: 1s,
+      ) 
+    ),
+    "whitespace": (
+      property: white-space,
+      class: whitespace,
+      values: (
+        "normal": normal,
+        "nowrap": nowrap,
+        "pre": pre,
+        "pre-line": pre-line,
+        "pre-wrap": pre-wrap,
+      )
+    ),
+    "resize": (
+      property: resize,
+      class: resize,
+      values: (
+        "none": none,
+        "both": both,
+        "horizontal": horizontal,
+        "vertical": vertical,
+      )
+    ),
+    "scale": (
+      property: transform,
+      class: scale,
+      state: hover,
+      values: (
+        "0": scale(0),
+        "50": scale(.5),
+        "75": scale(.75),
+        "90": scale(.9),
+        "95": scale(.95),
+        "100": scale(1),
+        "105": scale(1.05),
+        "110": scale(1.1),
+        "125": scale(1.25),
+        "150": scale(1.5),
+      )
+    ),
+    "filter": (
+      property: filter,
+      class: filter,
+      state: hover,
+      values: (
+        "none": none,
+        "grayscale": grayscale(1),
+        "invert": invert(1),
+        "sepia": sepia(1),
+        "blur": blur(1px),
+        "brightness": brightness(1),
+        "contrast": contrast(1),
+        "hue-rotate": hue-rotate(180deg),
+        "saturate": saturate(1),
+        "drop-shadow": drop-shadow(0 0 0 #000),
+      )
+    )
+  )
+);
+
+// Global Glow Effect
+@mixin glow {
+  &:hover,
+  &:focus {
+      box-shadow: 0 0 8px rgba(235, 137, 61, 0.6);
+  }
+}
+
+// Variables
+$enable-negative-margins: true;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "customfonts.scss";
+@import "variables.scss";
+@import "../node_modules/bootstrap/scss/variables";
+@import "navbar.scss";
+@import "index.scss";
+@import "custom.scss";

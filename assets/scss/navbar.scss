@@ -1,0 +1,178 @@
+.navbar {
+        --bs-navbar-toggler-border-color: $navbar-toggler-border-color
+        --bs-navbar-padding-x: 0.625rem;
+        --bs-navbar-padding-y: 0.625rem;
+        --bs-navbar-toggler-focus-width: 0;
+        background: rgba(25, 25, 25, 0.841) !important; 
+        // background: transparent;
+        // backdrop-filter: blur(10px);
+}
+.navbar-nav {
+        --bs-nav-link-color: #ffffff;
+        --bs-nav-link-font-size: 1.1rem;
+        --bs-nav-link-font-family: $poppins;
+        --bs-nav-link-font-weight: 600
+}
+
+.navbar .navbar-nav .nav-item .nav-link:not(.btn):hover {
+        text-shadow: 0 0 5px #d88846cb;
+}
+
+.nav-link.premium-link {
+        --tw-text-opacity: 1;
+        --tw-bg-opacity: .14;
+        display: flex;
+        color: rgb(255 195 79/var(--tw-text-opacity));
+        transition-duration: .2s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: rgb(255 195 79/var(--tw-bg-opacity));
+        overflow: hidden;
+        gap: 0.375rem;
+        align-items: center;
+}
+.nav-link.premium-link:hover {
+        --tw-bg-opacity: .25;
+}
+
+.nav-link.premium-link-mobile {
+        color: #ffe174
+}
+.avatar {
+        max-height: none;
+        max-width: none;
+        border-radius: 900px;
+        border: 2px solid #f59930;
+        height: 42px;
+        width: 42px;
+        margin-right: 8px;
+}
+.dropdown-menu {
+        --bs-dropdown-min-width: 16rem
+}
+.dropdown-menu-dark {
+        --bs-dropdown-bg: #1e1c1c;
+        --bs-dropdown-divider-bg: hsla(0, 0%, 100%, 0.24);
+        --bs-dropdown-link-hover-color: rgba(157, 218, 237, 0.482);
+}
+.rounded-lg {
+        border-radius: 0.5rem;
+}
+.dropdown-menu .userdecoration {
+        margin-bottom: 3rem;
+        width: 100%;
+}
+.dropdown-menu .usersettings {
+        margin: 28px 10px 16px;
+        background-color: #383838;
+        border-radius: 8px;
+        padding: 9px;
+}
+.dropdown-menu .logoutArea {
+        margin: 12px 10px 16px;
+        border-radius: 5px;
+        background-color: #ee62621b;
+        color: rgb(223, 82, 82);
+        padding: 5px
+}
+.userdecoration 
+        .userbanner {
+                transition: background-color .1s;
+                width: 100%;
+                background-color: rgb(139, 117, 117);
+        }
+        .popoutpremium {
+                height: 120px;
+                min-height: 120px;
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-size: cover;
+        }
+.userbanner.popout {
+        height: 120px;
+}
+.dropdown-menu .useravatar {
+        width: 92px;
+        height: 92px;
+        position: absolute;
+        display: block;
+        top: 74px;
+        left: 10px;
+        border-radius: 50%;
+        border-width: 5px;
+        border-color: #1e1c1c;
+        background-color: #1e1c1c;
+        padding: 3px 3px 3px 3px;
+}
+.dropdown-menu .username {
+        margin-top: -80px;
+}
+.roundedbanner {
+        border-radius: 4px 4px 0 0;
+}
+.userText {
+        padding: 12px 12px 0px
+}
+.userText 
+        .username {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #f5f5f5;
+                margin-bottom: 4px;
+        }
+        .userdiscrim {
+                font-size: 1rem;
+                font-weight: 400;
+                color: #f5f5f5;
+                margin-bottom: 4px;
+        }
+
+// Navbar Toggler
+.navbar-toggler span {
+  display: block;
+  background-color: #e6946ad6;
+  border-radius: 4px;
+  height: 3px;
+  width: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  left: 0;
+  opacity: 1;
+  transition: all 0.35s ease-out;
+  transform-origin: center left;
+}
+
+.navbar-toggler span:nth-child(1) {
+  transform: translate(0%, 0%) rotate(0deg);
+  margin-top: 0.3em;
+  width: 25px;
+}
+
+.navbar-toggler span:nth-child(2) {
+  opacity: 1;
+  width: 40px;
+}
+
+.navbar-toggler span:nth-child(3) {
+  transform: translate(0%, 0%) rotate(0deg);
+  width: 15px;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  transform: translate(15%, -33%) rotate(45deg);
+  width: 25px;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  transform: translate(15%, 33%) rotate(-45deg);
+  width: 25px;
+}
